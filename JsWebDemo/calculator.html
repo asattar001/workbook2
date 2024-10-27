@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <label for="number1">Number 1:</label>
+      <input type="number" name="number" id="number1" />
+
+      <label for="number2">Number 2:</label>
+      <input type="number" name="number" id="number2" />
+
+      <div style="margin: 1rem 0">
+        <button id="add" onclick="add()">Add</button>
+        <button id="subtract" onclick="substract()">Subtract</button>
+        <button id="multiply" onclick="multiply()">Multiply</button>
+        <button id="divide"onclick="divide()">Divide</button>
+      </div>
+
+      <label for="answer">Answer</label>
+      <input type="text" name="answer" id="answer" readonly/>
+    </main>
+    <script>
+      "use strict";
+      const number1 = document.querySelector("#number1");
+      const number2 = document.querySelector("#number2");
+      const answer = document.querySelector("#answer");
+      console.log(number1, number2, answer);
+
+      let add = () => {
+        answer.value = Number(number1.value) + Number(number2.value)
+      };
+      let substract = () => {
+        answer.value = Number(number1.value) - Number(number2.value)
+      };
+      let multiply = () => {
+        answer.value = Number(number1.value) * Number(number2.value)
+      };
+      let divide = () => {
+        answer.value = (Number(number1.value) / Number(number2.value)).toFixed(2)
+      };
+    </script>
+  </body>
+</html>

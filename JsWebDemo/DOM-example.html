@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="exampleDiv">Its Sunny</div>
+      <button onclick="changeWeather()">change weather</button>
+    </main>
+    <script>
+
+      "use strict";
+      // this gets div element in the document/html
+      let exampleText = document.getElementById("exampleDiv"); //-->   <div id="exampleDiv">Its Sunny</div>
+
+      function changeWeather() {
+        // checks if the text inside the div
+        if (exampleText.innerText === "Its Sunny") {
+          exampleText.innerText = "Its Raining";
+        } else {
+          exampleText.innerText = "Its Sunny";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- its sunny -> its raining -->
